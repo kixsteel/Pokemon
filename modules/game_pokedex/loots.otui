@@ -1,0 +1,144 @@
+ItemWidget < UIItem
+  margin-top: 5
+  margin-left: 5
+  anchors.left: parent.left
+  size: 32 32
+  virtual: true
+  visible: false
+
+Panel
+  ScrollablePanel
+    id: pokemonLoots
+    anchors.fill: parent
+    margin-right: 22
+    padding: 5
+    vertical-scrollbar: pokemonLootsScrollBar
+
+    ItemWidget
+      id: item1
+      anchors.top: parent.top
+    Label
+      id: item1label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item1.top
+      anchors.left: item1.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item2
+      anchors.top: item1.bottom
+      margin-top: 5
+    Label
+      id: item2label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item2.top
+      anchors.left: item2.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item3
+      anchors.top: item2.bottom
+      margin-top: 5
+    Label
+      id: item3label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item3.top
+      anchors.left: item3.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item4
+      anchors.top: item3.bottom
+      margin-top: 5
+    Label
+      id: item4label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item4.top
+      anchors.left: item4.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item5
+      anchors.top: item4.bottom
+      margin-top: 5
+    Label
+      id: item5label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item5.top
+      anchors.left: item5.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item6
+      anchors.top: item5.bottom
+      margin-top: 5
+    Label
+      id: item6label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item6.top
+      anchors.left: item6.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item7
+      anchors.top: item6.bottom
+      margin-top: 5
+    Label
+      id: item7label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item7.top
+      anchors.left: item7.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item8
+      anchors.top: item7.bottom
+      margin-top: 5
+    Label
+      id: item8label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item8.top
+      anchors.left: item8.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item9
+      anchors.top: item8.bottom
+      margin-top: 5
+    Label
+      id: item9label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item9.top
+      anchors.left: item9.left
+      margin-top: 13
+      margin-left: 50
+    ItemWidget
+      id: item10
+      anchors.top: item9.bottom
+      margin-top: 5
+    Label
+      id: item10label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: item10.top
+      anchors.left: item10.left
+      margin-top: 13
+      margin-left: 50
+
+  VerticalScrollBar
+    id: pokemonLootsScrollBar
+    anchors.top: pokemonLoots.top
+    anchors.left: pokemonLoots.right
+    anchors.bottom: pokemonLoots.bottom
+    margin-left: 3
+    step: 32
+    pixels-scroll: true

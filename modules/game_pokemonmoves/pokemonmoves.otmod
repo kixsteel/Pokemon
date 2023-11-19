@@ -1,0 +1,11 @@
+Module
+  name: game_pokemonmoves
+  description: pokemon moves bar
+  author: drakylucas, pota
+  website: http://www.pokedashgames.com
+  autoload: true
+  autoload-priority: 1000
+  scripts: [ pokemonmoves ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

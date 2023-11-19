@@ -1,0 +1,63 @@
+ElementButton < UIWidget
+  size: 20 20
+  margin-left: 3
+
+EffectivenessPanel < Panel
+  height: 26
+  border-width: 1
+  border-color: #13171C
+  anchors.top: prev.bottom
+  anchors.left: parent.left
+  anchors.right: parent.right
+  margin-top: 30
+  Label
+    text-auto-resize: true
+    font: verdana-11px-rounded
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 7
+    margin-left: 3
+  Panel
+    height: 20
+    anchors.top: parent.top
+    anchors.left: prev.right
+    anchors.right: parent.right
+    margin-top: 3
+    margin-left: 2
+    layout:
+      type: horizontalBox
+      anchors.top: parent.top
+      anchors.left: parent.left
+  Panel
+    height: 20
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    anchors.right: parent.right
+    margin-top: 4
+    layout:
+      type: horizontalBox
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+Panel
+  ScrollablePanel
+    id: pokemonEffectiveness
+    anchors.fill: parent
+    margin-right: 22
+    padding: 5
+    vertical-scrollbar: pokemonEffectivenessScrollBar
+
+    Label
+      text-auto-resize: true
+      font: verdana-11px-rounded
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+  VerticalScrollBar
+    id: pokemonEffectivenessScrollBar
+    anchors.top: pokemonEffectiveness.top
+    anchors.left: pokemonEffectiveness.right
+    anchors.bottom: pokemonEffectiveness.bottom
+    margin-left: 3
+    step: 32
+    pixels-scroll: true

@@ -1,0 +1,100 @@
+MoveWidget < UIWidget
+  height: 34
+  visible: false
+  anchors.left: parent.left
+  anchors.right: parent.right
+
+  UIWidget
+    size: 32 32
+    text-offset: 11 19
+    font: verdana-11px-rounded
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 1
+    margin-left: 1
+
+  Label
+    text-auto-resize: true
+    font: verdana-11px-rounded
+    anchors.top: parent.top
+    anchors.left: prev.right
+    margin-top: 2
+    margin-left: 5
+
+  Label
+    text-auto-resize: true
+    font: verdana-11px-rounded
+    anchors.left: prev.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 2
+
+  UIWidget
+    size: 20 20
+    anchors.verticalCenter: parent.verticalCenter
+    anchors.right: parent.right
+    margin-right: 1
+
+Panel
+  ScrollablePanel
+    id: pokemonMoves
+    anchors.fill: parent
+    margin-right: 22
+    padding: 5
+    vertical-scrollbar: pokemonMovesScrollBar
+
+    MoveWidget
+      id: move1
+      anchors.top: parent.top
+    MoveWidget
+      id: move2
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move3
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move4
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move5
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move6
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move7
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move8
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move9
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move10
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move11
+      anchors.top: prev.bottom
+      margin-top: 5
+    MoveWidget
+      id: move12
+      anchors.top: prev.bottom
+      margin-top: 5
+
+  VerticalScrollBar
+    id: pokemonMovesScrollBar
+    anchors.top: pokemonMoves.top
+    anchors.left: pokemonMoves.right
+    anchors.bottom: pokemonMoves.bottom
+    margin-left: 3
+    step: 19
+    pixels-scroll: true

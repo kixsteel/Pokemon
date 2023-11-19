@@ -1,0 +1,298 @@
+AdvancedSearchCheckBox < CheckBox
+  font: verdana-11px-rounded
+  color: white
+  text-auto-resize: true
+  @onCheckChange: modules.game_pokedex.advancedSearch(self)
+
+PokemonButton < UIButton
+  font: verdana-11px-rounded
+  focusable: true
+  text-align: top
+  text-offset: 0 3
+  icon-offset: 0 5
+  image-color: white
+  image-source: /images/ui/menubox
+  image-border: 3
+  padding: 1
+
+  $hover:
+    image-color: green
+
+  $focus:
+    image-color: #00CCFF
+
+  UIWidget
+    size: 12 12
+    phantom: true
+    image-color: alpha
+    image-source: /images/game/pokedex/catched
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+AdvancedSearchWindow < HeadlessWindow
+  !text: tr('Advanced Search')
+  text-offset: 0 4
+  height: 424
+  draggable: false
+  padding: 16
+  padding-top: 30
+  @onEnter: modules.game_pokedex.advancedSearchShow()
+  @onEscape: modules.game_pokedex.advancedSearchShow()
+
+  Label
+    font: verdana-11px-rounded
+    color: white
+    !text: tr('Show Pokemons with these characteristics')..':'
+    text-auto-resize: true
+    text-wrap: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  AdvancedSearchCheckBox
+    !text: tr('Catched')
+    text-auto-resize: true
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 10
+
+  Label
+    id: skillsLabel
+    font: verdana-11px-rounded
+    color: white
+    !text: tr('Skills')..':'
+    text-auto-resize: true
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 10
+    margin-left: 20
+
+  Label
+    id: typesLabel
+    font: verdana-11px-rounded
+    color: white
+    !text: tr('Types')..':'
+    text-auto-resize: true
+    anchors.top: prev.top
+    anchors.left: skillsLabel.left
+    margin-left: 120
+
+  Button
+    text: Ok
+    width: 60
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_pokedex.advancedSearchShow()
+
+  Button
+    !text: tr('Clear')
+    width: 70
+    anchors.left: prev.right
+    anchors.bottom: prev.bottom
+    margin-left: 5
+    @onClick: modules.game_pokedex.clearCheckBoxChecked()
+
+  AdvancedSearchCheckBox
+    text: Rock Smash
+    anchors.top: typesLabel.bottom
+    anchors.left: parent.left
+    margin-top: 10
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Cut
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Light
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Dig
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Blink
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Teleport
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Fly
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Ride
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Surf
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Control Mind
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Transform
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Headbutt
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 20
+
+  AdvancedSearchCheckBox
+    text: Bug
+    anchors.top: typesLabel.bottom
+    anchors.left: typesLabel.left
+    margin-top: 10
+
+  AdvancedSearchCheckBox
+    text: Dark
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Dragon
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Electric
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Fairy
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Fighting
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Fire
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Flying
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Ghost
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Grass
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Ground
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Ice
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Normal
+    anchors.top: typesLabel.bottom
+    anchors.left: typesLabel.left
+    margin-top: 10
+    margin-left: 97
+
+  AdvancedSearchCheckBox
+    text: Poison
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Psychic
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Rock
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Steel
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  AdvancedSearchCheckBox
+    text: Water
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+PokedexWindow
+  anchors.centerIn: parent
+  @onEscape: |
+    if not self:recursiveGetChildById('advancedSearchWindow'):isVisible() then
+      self:hide()
+    end
+
+  AdvancedSearchWindow
+    id: advancedSearchWindow
+    anchors.right: parent.right
+    anchors.left: panelSeparator.right
+    visible: false
